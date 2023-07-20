@@ -1,0 +1,72 @@
+# First we'll import the os module and  reading CSV files
+import os
+import csv
+
+# Module for reading CSV files
+pypollcsv = os.path.join("Resources","election_data.csv")
+
+# Lists to store data
+candidates = []
+specificcandidate = []
+votes = []
+votespercentage = []
+
+# Set variables to zero
+electioncount = 0
+
+# Open the CSV using the set path pypollcsv
+
+with open(pypollcsv, newline="") as csvfile:
+
+      csvreader = csv.reader(csvfile, delimiter=",")
+      csv_header = next(csvreader)
+
+# Going through csv and adding up election count 
+      for row in csvreader:
+            # Use count to total months
+            electioncount = electioncount + 1
+            # Set the candidate names to candidates
+            candidates.append(row[2])
+
+# Create a set from the candidates to get the specific candidate names
+      for x in set(candidates):
+            specificcandidate.append(x) 
+            y = candidates.count(x)
+            votes.append(y)
+
+# z is the percent of total votes 
+            z = (y/electioncount)*100
+            votespercentage.append(z)
+        
+      winningvotes = max(votes)
+      winner = specificcandidate[votes.index(winningvotes)]
+
+
+# Print Election Analysis
+
+print("Election Results")
+print("-------------------------")
+
+print("Total Votes :" + str(electioncount))   
+print("-------------------------")
+
+# Print candidate through ranged list and print winner
+
+for i in range(len(specificcandidate)):
+            print(specificcandidate[i] + ": " + str(votespercentage[i]) +"% (" + str(votes[i])+ ")")
+print("-------------------------")
+print("The winner is: " + winner)
+print("-------------------------")
+
+# Print to a text file: election_results.txt
+
+with open('election_results.txt', 'w') as text:
+    text.write("Election Results\n")
+    text.write("---------------------------------------\n")
+    text.write("Total Vote: " + str(electioncount) + "\n")
+    text.write("---------------------------------------\n")
+    for i in range(len(set(specificcandidate))):
+        text.write(specificcandidate[i] + ": " + str(votespercentage[i]) +"% (" + str(votes[i]) + ")\n")
+    text.write("---------------------------------------\n")
+    text.write("The winner is: " + winner + "\n")
+    text.write("---------------------------------------\n")
