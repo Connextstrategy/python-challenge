@@ -65,7 +65,7 @@ Your analysis should align with the following results:
 
 ### Python Code - pybank
 
-# First we'll import the os module
+First we'll import the os module
 import os
 
 # Module for reading CSV files
