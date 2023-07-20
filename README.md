@@ -26,6 +26,26 @@ The task is to create a Python script that analyzes the records to calculate eac
 
 The analysis should align with the following results:
 
+## pypoll
+
+PyBank Instructions
+
+In this Challenge, I was tasked with helping a small, rural town modernize its vote-counting process.
+
+I was given a set of poll data called election_data.csv. The dataset is composed of three columns: "Voter ID", "County", and "Candidate". The task is to create a Python script that analyzes the votes and calculates each of the following values:
+
+* The total number of votes cast
+
+* A complete list of candidates who received votes
+
+* The percentage of votes each candidate won
+
+* The total number of votes each candidate won
+
+* The winner of the election based on popular vote
+
+Your analysis should align with the following results:
+
 ### Dependencies
 
 * Must have GitBash used as an application for Microsoft Windows environments which provides an emulation layer for a Git command line experience noting commands for analysis
