@@ -49,6 +49,9 @@ I was given a set of poll data called election_data.csv. The dataset is composed
 
 Your analysis should align with the following results:
 
+![image](https://github.com/Connextstrategy/python-challenge/assets/18508699/6fabf385-b74e-4fc1-be13-537addabf39f)
+
+
 ### Dependencies
 
 * Must have GitBash used as an application for Microsoft Windows environments which provides an emulation layer for a Git command line experience noting commands for analysis
