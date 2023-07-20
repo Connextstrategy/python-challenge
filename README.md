@@ -26,6 +26,9 @@ The task is to create a Python script that analyzes the records to calculate eac
 
 The analysis should align with the following results:
 
+![image](https://github.com/Connextstrategy/python-challenge/assets/18508699/0b18f223-caef-4df7-a527-cef12fb1a3ff)
+
+
 ## pypoll
 
 PyBank Instructions
